@@ -13,6 +13,7 @@ const dom = new JSDOM(`
 const { document } = dom.window;
 const form = document.querySelector("form");
 const input = document.querySelector("input");
+const button = document.querySelector("button");
     
 input.addEventListener("invalid", e => {
     console.log("invalid fired")
@@ -23,4 +24,4 @@ form.addEventListener("submit", e => {
     console.log("submit fired")
 });
     
-form.submit();
+button.submit();
